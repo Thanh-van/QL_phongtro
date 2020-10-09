@@ -2,16 +2,20 @@ package com.example.ql_phong;
 
 import android.os.Bundle;
 
+import com.example.ql_phong.Retrofit.Retrofit_Client;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-public class MainActivity extends AppCompatActivity {
 
+
+import okhttp3.OkHttpClient;
+
+public class MainActivity extends AppCompatActivity {
+    com.example.ql_phong.nguoithue.nguoithueFragment nguoithueFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +29,22 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+        //nguoithueFragment=new nguoithueFragment();
+        //nguoithueFragment.Getdata();
+
+        Retrofit_Client.retrofit();
+
+
+    }
+
+    public  void LoadData(){
+        new Thread(){
+            @Override
+            public void run() {
+                super.run();
+
+            }
+        };
     }
 
 }

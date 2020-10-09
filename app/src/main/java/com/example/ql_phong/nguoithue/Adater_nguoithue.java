@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.ql_phong.R;
 
 import java.util.ArrayList;
@@ -52,12 +53,12 @@ public class Adater_nguoithue extends BaseAdapter {
 
         TextView textView2 = convertView.findViewById(R.id.phong_user);
 
-        imageView.setImageResource(arrayList.get(position).getImg());
-
         textView.setText(arrayList.get(position).getName());
         textView1.setText(arrayList.get(position).getPhone());
         textView2.setText(arrayList.get(position).getPhong());
-
+        Glide.with(context)
+                .load(arrayList.get(position).getImg())
+                .into(imageView);
         ImageView imageCall = convertView.findViewById(R.id.btnCall);
 
         imageCall.setOnClickListener(new View.OnClickListener() {
