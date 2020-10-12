@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <RelativeLayout
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:background="@color/bacgroup_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+        <TextView
+            android:id="@+id/texxt"
+            android:textColor="@color/color_text_toolbar"
+            android:textSize="20dp"
+            android:text="Danh Sach Thue"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+        </TextView>
+        <ImageButton
+            android:id="@+id/add"
+            android:background="@color/bacgroup_toolbar"
+
+            android:layout_alignParentRight="true"
+            android:src="@drawable/add_24"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+
+            />
+
+
+
+    </RelativeLayout>
+
     <ListView
         android:id="@+id/list_nguoithue"
         android:layout_width="wrap_content"

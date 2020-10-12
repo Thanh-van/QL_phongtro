@@ -5,20 +5,14 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+   >
 
-    <!--     android:paddingTop="?attr/actionBarSize"-->
+<!--     android:paddingTop="?attr/actionBarSize"-->
 
-    <Toolbar
-        android:title="Tao"
-        android:background="#16a085"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        tools:ignore="MissingConstraints,NewApi" />
+
 
 
     <fragment
-        android:layout_marginTop="55dp"
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"

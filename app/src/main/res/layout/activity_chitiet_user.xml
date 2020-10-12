@@ -2,277 +2,260 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".chitiet_user">
 
-    <RelativeLayout
+    <Toolbar
+
+        android:id="@+id/toolbar"
+        android:title="Chi Tiết Khách Thuê"
+        android:titleTextColor="@color/color_text_toolbar"
+        android:background="@color/bacgroup_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <androidx.cardview.widget.CardView
-            android:layout_width="100dp"
-            app:cardCornerRadius="50dp"
-            android:layout_centerInParent="true"
-            android:layout_height="100dp">
-            <ImageView
-                android:id="@+id/anh"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/van" />
-        </androidx.cardview.widget.CardView>
-
-    </RelativeLayout>
-
+        android:layout_height="wrap_content"
+        tools:ignore="NewApi" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="0dp">
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
 
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+        <RelativeLayout
             android:layout_marginTop="10dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/name" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                app:cardCornerRadius="50dp">
+
+                <ImageView
+                    android:id="@+id/anh"
+                    android:layout_width="106dp"
+                    android:layout_height="115dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/van" />
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+            android:orientation="horizontal"
+            android:padding="0dp">
 
             <TextView
+                android:text="Họ Tên: "
+                android:textSize="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Họ Tên"
-                android:textSize="10dp" />
+                />
 
             <EditText
                 android:id="@+id/ten_nt"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="20dp"
-                android:textSize="10dp" />
+                android:hint="Nguyễn Thị Ly"
+                android:textSize="15dp" />
         </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="0dp">
 
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="10dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/cmt" />
+
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+            android:orientation="horizontal"
+            android:padding="0dp">
 
             <TextView
+                android:text="Số CMT: "
+                android:textSize="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CMT"
-                android:textSize="10dp" />
+                />
 
             <EditText
                 android:id="@+id/cmt"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="20dp"
-                android:textSize="10dp" />
+                android:hint="123456789"
+                android:textSize="15dp" />
         </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="0dp">
-
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="10dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/date" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+            android:orientation="horizontal"
+            android:padding="0dp">
 
             <TextView
+                android:text="Ngày Sinh: "
+                android:textSize="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ngày Sinh"
-                android:textSize="10dp" />
+                />
 
             <EditText
                 android:id="@+id/ngaysinh"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="20dp"
-                android:textSize="10dp" />
+                android:hint="24/11/1999"
+                android:inputType="date"
+                android:textSize="15dp" />
         </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="0dp">
-
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="10dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/gioitinh" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+            android:orientation="horizontal"
+            android:padding="0dp">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Giới Tính"
-                android:layout_marginTop="10dp"
-                android:textSize="10dp" />
+                android:layout_marginTop="10dp">
 
-            <RadioGroup
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <RadioButton
-                    android:id="@+id/nam"
-                    android:text="Nam"
+                <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <RadioButton
-                    android:id="@+id/nu"
-                    android:text="Nữ"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Giới Tính"
+                    android:textSize="15dp" />
+
+                <RadioGroup
+                    android:gravity="right"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </RadioGroup>
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/nam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nam" />
+
+                    <RadioButton
+                        android:id="@+id/nu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nữ" />
+                </RadioGroup>
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="0dp">
-
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="10dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/gmail" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+            android:orientation="horizontal"
+            android:padding="0dp">
 
             <TextView
+                android:text="Email : "
+                android:textSize="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Email"
-                android:textSize="10dp" />
+                />
 
             <EditText
                 android:id="@+id/email"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="20dp"
-                android:textSize="10dp" />
+                android:hint="yeukhoia@gmail.com"
+                android:textSize="15dp" />
         </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="0dp">
-
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="10dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/phone" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+            android:orientation="horizontal"
+            android:padding="0dp">
 
             <TextView
+                android:text="Phone : "
+                android:textSize="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Số Điện Thoại"
-                android:textSize="10dp" />
+                />
+
 
             <EditText
                 android:id="@+id/sdt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="0337820000"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="0dp">
+
+            <TextView
+                android:text="Quê Quán : "
+                android:textSize="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="20dp"
-                android:textSize="10dp" />
+                />
+
+            <EditText
+                android:id="@+id/que"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Quang Trung-Ngọc Lặc-Thanh Hóa"
+                android:textSize="15dp" />
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_marginTop="15dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/came" />
+
+            <Button
+                android:padding="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chọn ảnh"
+                android:textSize="12dp" />
+        </LinearLayout>
+
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="0dp">
+        android:layout_weight="2"
+        android:gravity="bottom">
 
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="10dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/home" />
-
-        <LinearLayout
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Quê Quán"
-                android:textSize="10dp" />
-
-            <EditText
-                android:id="@+id/quequan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="20dp"
-                android:textSize="10dp" />
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_weight="2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            android:text="Xóa"
             android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:onClick="xoa"
+            android:text="Xóa" />
+
         <Button
-            android:text="Sửa"
-            android:layout_weight="1"
+            android:onClick="sua"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sửa" />
     </LinearLayout>
 
 
